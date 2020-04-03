@@ -22,5 +22,18 @@ To create the authorized client, type `sudo mosquitto_passwd -c /etc/mosquitto/p
 There are two different installation methods. The simpler method is to directly download the executable file **main.exe**. One limitation of this method is the default username `user` and password `pass` must be used to connect to the broker. If you wish to use your own username and password, download the `airsoft_target` folder. 
 
 Inside the `airsoft_target` folder, open `main.py` and change `mqtt_user` and `mqtt_password` on lines **X** and **Y** to the username and password you wish to use. Save and close the file. The program can now be launched by running the script `main.py` (type `python main.py`). You can also use `pyinstaller` to create a single executable `main.exe`, which allows the program to be launched directly by opening the executable file. This however will not be covered here.
-#### ESP32 Micro-controller
-Finally, there are the targets. The Arduino IDE is needed, along with the ESP32 platform (for installation, see: `https://github.com/espressif/arduino-esp32/blob/master/docs/arduino-ide/boards_manager.md`).
+#### Targets
+Finally, there are the targets. To upload our sketches to the ESP32 micro-controllers, the Arduino IDE, along with the ESP32 platform, is needed (for installation, see: `https://github.com/espressif/arduino-esp32/blob/master/docs/arduino-ide/boards_manager.md`). Open the `airsoft_target.ino` sketch and configure lines 6 to 13 under `Identifier`.
+```
+const char* ssid = "wifi name";
+const char* wifi_password = "wifi password";
+
+const char* mqtt_server = "broker ip address";
+const char* mqtt_user = "broker username";
+const char* mqtt_pass = "broker password";
+const char* clientID = "id";
+char id = 'id';
+```
+The last two lines should be an ID (ranging from 1 to 9) unique to that target. In other words, you can have at most 9 targets. The ID should always start from 1, and increase by 1 for each additional target. **Note: Targets must NOT share the same ID**. 
+
+To build the physical targets, you will need some kind of sensor to detect hits (such as a snap action limit switch, pressure sensor, etc.) and an LED to indicate that the target is active. The sensor must be connected to pin 3 of the micro-controller and LED to pin 4. There are many methods to power the ESP32; these methods will not be covered here.
