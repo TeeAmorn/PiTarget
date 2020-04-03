@@ -22,3 +22,5 @@ To create the authorized client, type `sudo mosquitto_passwd -c /etc/mosquitto/p
 There are two different installation methods. The simpler method is to directly download the executable file **main.exe**. One limitation of this method is the default username `user` and password `pass` must be used to connect to the broker. If you wish to use your own username and password, download the `airsoft_target` folder. 
 
 Inside the `airsoft_target` folder, open `main.py` and change `mqtt_user` and `mqtt_password` on lines **X** and **Y** to the username and password you wish to use. Save and close the file. The program can now be launched by running the script `main.py` (type `python main.py`). You can also use `pyinstaller` to create a single executable `main.exe`, which allows the program to be launched directly by opening the executable file. This however will not be covered here.
+#### ESP32 Micro-controller
+Finally, there are the targets. The Arduino IDE is needed, along with the ESP32 platform (for installation, see: `https://github.com/espressif/arduino-esp32/blob/master/docs/arduino-ide/boards_manager.md`).
