@@ -34,6 +34,6 @@ const char* mqtt_pass = "broker password";
 const char* clientID = "id";
 char id = 'id';
 ```
-The last two lines should be an ID (ranging from 1 to 9) unique to that target. In other words, you can have at most 9 targets. The ID should always start from 1, and increase by 1 for each additional target. **Note: Targets must NOT share the same ID**. 
+To find the broker's IP address, type `ifconfig` into terminal on the Raspberry Pi. The IP address should be on the second line after the word `inet`. The last two lines should be an ID (ranging from 1 to 9) unique to that target. In other words, you can have at most 9 targets. The ID should always start from 1, and increase by 1 for each additional target. **Note: Targets must NOT share the same ID**. 
 
 To build the physical targets, you will need some kind of sensor to detect hits (such as a snap action limit switch, pressure sensor, etc.) and an LED to indicate that the target is active. The sensor must be connected to pin 3 of the micro-controller and LED to pin 4. There are many methods to power the ESP32; these methods will not be covered here.
