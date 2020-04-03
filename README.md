@@ -1,7 +1,7 @@
 # PiTarget
 The goal of this project is to design airsoft targets that are controlled centrally through a terminal-based program ran on the Raspberry Pi. The MQTT protocol is adopted to establish communication between the program and the targets. These targets are built using ESP32 micro-controllers, which communicate to the program via the MQTT broker hosted on the Raspberry Pi.
 ### A Note to the Reader
-This is my first Rasberry Pi project. I am relatively inexperienced in the areas of IoT and programming. Thus, it is without doubt that you will find certain (or even many) parts of my scripts and explanation where codes are unoptimized and terms are misused. I am still learning and will appreciate any comments and advice. Thank you in advance!
+This is my first Rasberry Pi project. I am relatively inexperienced in the areas of IoT and programming. It is without doubt that you will find certain (or even many) parts of my scripts and explanation where codes are unoptimized and terms are misused. I am still learning and will appreciate any comments and advice. Thank you in advance!
 ## Installation
 ### Broker
 This project uses Mosquitto to host the MQTT broker. To install the Mosquitto package, open terminal on the Raspberry Pi and type `sudo apt-get install mosquitto`. 
