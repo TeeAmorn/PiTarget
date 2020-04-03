@@ -38,7 +38,7 @@ To find the broker's IP address, type `ifconfig` into terminal on the Raspberry 
 
 To build the physical targets, you will need some kind of sensor to detect hits (such as a snap action limit switch, pressure sensor, etc.) and an LED to indicate that the target is active. The sensor must be connected to pin 3 of the micro-controller and LED to pin 4. There are many methods to power the ESP32; these methods will not be covered here.
 ## Usage
-Whenever you launch the program, you will be prompted to enter the IP address of your broker.
+Whenever you launch the program, you will be prompted to enter the IP address of your broker. **Note: The program has to be able to connect to the mosquitto broker on the Raspberry Pi in order to proceed onto the main screen**.
 
 This will then take you to the main menu. First, configure your program to match the number of targets you have and set the gamemode's difficulty to your desired level. As the difficulty increases, the interval in which new targets appear and the duration in which they appear for decrease.
 
