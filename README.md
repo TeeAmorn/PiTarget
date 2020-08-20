@@ -46,4 +46,4 @@ This will then take you to the main menu. First, configure your program to match
 After configuring your program, return to the main screen and pick your desired gamemode. `Practice` mode merely spawns new targets indefinitely. In `Blitz` mode, you have to earn the most points over the span of 30 seconds. In `Speed` mode, you have to hit 10 targets in the least amount of time (thus earning you the highest points). 
 ![](Images/main_screen.png)
 ## In the Works
-The current setup uses an external access point to connect between the broker and the clients. To make this setup more portable, I hope to setup an access point on the Raspberry Pi itself. In other words, to have it act like a wireless router.
+The current setup uses an external access point to connect between the broker and the clients. To make this setup more portable, I hope to setup an access point on the Raspberry Pi itself, or in other words, to have it act like a wireless router.
